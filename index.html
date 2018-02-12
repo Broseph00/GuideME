@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<title>Guide Me</title>
+</head>
+<body class="w3-gray">
+<h1 class="w3-center w3-blue" style="margin-top: 0px;margin-bottom: 20px;">Guide Me</h1>
+<div class="w3-container w3-center w3-content">
+	<p id="lang-title" class="w3-xlarge" style="margin-top: -5px">Select Your Language</p>
+	
+		<select id="lang" class ="w3-select" name="lanuage" style="width:35%;margin-bottom: 20px">
+			<option value="en">English</option>
+			<option value="ar">Afrikaans</option>
+			<option value="bn">Bangla</option>
+			<option value="bs">Bosnian</option>
+			<option value="bg">Bulgarian</option>
+			<option value="yue">Cantonese</option>
+			<option value="ca">Catalan</option>
+			<option value="zh-Hans">Chinese Simplified</option>
+			<option value="zh-Hant">Chinese Traditional</option>
+			<option value="hr">Croatian</option>
+			<option value="cs">Czech</option>
+			<option value="da">Danish</option>
+			<option value="nl">Dutch</option>
+			<option value="et">Estonian</option>
+			<option value="fj">Fijian</option>
+			<option value="fil">Filipino</option>
+			<option value="fi">Finnish</option>
+			<option value="fr">French</option>
+			<option value="de">German</option>
+			<option value="el">Greek</option>
+			<option value="ht">Haitian Creole</option>
+			<option value="he">Hebrew</option>
+			<option value="hi">Hindi</option>
+			<option value="mww">Hmong Daw</option>
+			<option value="hu">Hungarian</option>
+			<option value="id">Indonesian</option>
+			<option value="it">Italian</option>
+			<option value="ja">Japanese</option>
+			<option value="sw">Kiswahili</option>
+			<option value="tlh">Klingon</option>
+			<option value="ko">Korean</option>
+			<option value="lv">Latvian</option>
+			<option value="lt">Lithuanian</option>
+			<option value="mg">Malagasy</option>
+			<option value="ms">Malay</option>
+			<option value="mt">Maltese</option>
+			<option value="nb">Norwegian</option>
+			<option value="fa">Persian</option>
+			<option value="pl">Polish</option>
+			<option value="pt">Portuguese</option>
+			<option value="otq">Queretaro Otomi</option>
+			<option value="ro">Romanian</option>
+			<option value="ru">Russian</option>
+			<option value="sm">Samoan</option>
+			<option value="sr-Cyrl">Serbian</option>
+			<option value="sr-Latn">Serbian</option>
+			<option value="sk">Slovak</option>
+			<option value="sl">Slovenian</option>
+			<option value="es">Spanish</option>
+			<option value="sv">Swedish</option>
+			<option value="ty">Tahitian</option>
+			<option value="ta">Tamil</option>
+			<option value="th">Thai</option>
+			<option value="to">Tongan</option>
+			<option value="tr">Turkish</option>
+			<option value="uk">Ukrainian</option>
+			<option value="ur">Urdu</option>
+			<option value="vi">Vietnamese</option>
+			<option value="cy">Welsh</option>
+			<option value="yua">Yucatec Maya</option>
+		</select>
+		<br id="br-lang">
+			<button id="lang-btn" class="w3-button w3-blue" style="width:15%">Submit</button>
+	
+	
+		<!--Second Page Including -->
+		<p id="Loc-start-title" class="w3-xlarge" style="display:none;margin-top: -5px;">Select Your Starting Location</p>
+		<p id="Loc-end-title" class="w3-xlarge" style="display:none;margin-top: -5px;">Select Your Destination</p>
+		<p id="confirm-title" class="w3-xlarge" style="display:none;margin-top: -5px;">Confirm Trip</p>
+		<p id="confirmed-title" class="w3-xlarge" style="display:none;margin-top: -5px;">Trip Confirmed</p>
+		
+		
+		
+		<div class="w3-row">
+			<div id="map-container" class="w3-center w3-content">
+				<div id="map" class="w3-center w3-content" style="height: 450px;width:80%;display:none;margin-top: -20px;margin-bottom: 20px;"></div>
+		</div>
+			<div id="directions" class="w3-center w3-content w3-half" style="display: none">
+			<p id="target-lang-title" class="w3-xlarge w3-text-blue" style="display:none;margin-top: -5px;">Choose a language for the directions</p>
+
+			<select id="target-lang" class ="w3-select" name="target-lanuage" style="width:35%;margin-bottom: 20px">
+			<option value="en">English</option>
+			<option value="ar">Afrikaans</option>
+			<option value="bn">Bangla</option>
+			<option value="bs">Bosnian</option>
+			<option value="bg">Bulgarian</option>
+			<option value="yue">Cantonese</option>
+			<option value="ca">Catalan</option>
+			<option value="zh-Hans">Chinese Simplified</option>
+			<option value="zh-Hant">Chinese Traditional</option>
+			<option value="hr">Croatian</option>
+			<option value="cs">Czech</option>
+			<option value="da">Danish</option>
+			<option value="nl">Dutch</option>
+			<option value="et">Estonian</option>
+			<option value="fj">Fijian</option>
+			<option value="fil">Filipino</option>
+			<option value="fi">Finnish</option>
+			<option value="fr">French</option>
+			<option value="de">German</option>
+			<option value="el">Greek</option>
+			<option value="ht">Haitian Creole</option>
+			<option value="he">Hebrew</option>
+			<option value="h1">Hindi</option>
+			<option value="mww">Hmong Daw</option>
+			<option value="hu">Hungarian</option>
+			<option value="id">Indonesian</option>
+			<option value="it">Italian</option>
+			<option value="ja">Japanese</option>
+			<option value="sw">Kiswahili</option>
+			<option value="tlh">Klingon</option>
+			<option value="ko">Korean</option>
+			<option value="lv">Latvian</option>
+			<option value="lt">Lithuanian</option>
+			<option value="mg">Malagasy</option>
+			<option value="ms">Malay</option>
+			<option value="mt">Maltese</option>
+			<option value="nb">Norwegian</option>
+			<option value="fa">Persian</option>
+			<option value="pl">Polish</option>
+			<option value="pt">Portuguese</option>
+			<option value="otq">Queretaro Otomi</option>
+			<option value="ro">Romanian</option>
+			<option value="ru">Russian</option>
+			<option value="sm">Samoan</option>
+			<option value="sr-Cyrl">Serbian</option>
+			<option value="sr-Latn">Serbian</option>
+			<option value="sk">Slovak</option>
+			<option value="sl">Slovenian</option>
+			<option value="es">Spanish</option>
+			<option value="sv">Swedish</option>
+			<option value="ty">Tahitian</option>
+			<option value="ta">Tamil</option>
+			<option value="th">Thai</option>
+			<option value="to">Tongan</option>
+			<option value="tr">Turkish</option>
+			<option value="uk">Ukrainian</option>
+			<option value="ur">Urdu</option>
+			<option value="vi">Vietnamese</option>
+			<option value="cy">Welsh</option>
+			<option value="yua">Yucatec Maya</option>
+		</select>
+
+		<ol id="list">
+			
+		</ol>
+			</div>
+		</div>
+		
+
+		<button id="Loc-start-btn" class="w3-button w3-blue w3-center w3-content" style="width:30%;display: none">Submit</button>
+		<button id="Loc-end-btn" class="w3-button w3-blue w3-center w3-content" style="width:30%;display: none">Submit</button>
+		<button id="confirm-no-btn" class="w3-button w3-blue w3-center w3-content" style="width:20%;display: none">No</button>
+		<button id="confirm-yes-btn" class="w3-button w3-blue w3-center" style="width:20%;display: none">Yes</button>
+
+		<!-- Third page --> 
+		
+		<button id="direction-btn" class="w3-button w3-blue w3-center w3-content" style="width:20%;display: none">See Directions</button>
+		<button id="map-btn" class="w3-button w3-blue w3-center w3-content" style="width:20%;display: none">See Map</button>
+		<a id="complete-btn" href="https://ufl.qualtrics.com/jfe/form/SV_6M8LXK10zd1IyGx" class="w3-button w3-blue w3-center" style="width:20%;display: none">Complete Interaction</a>
+	</div>
+	
+	
+	
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPovP8__gTNPQ_okDSYkv4_vt7mVY5_4w"
+    async defer></script>
+	</body>
+</html>
